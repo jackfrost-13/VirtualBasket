@@ -1,0 +1,150 @@
+html, body {
+    height: auto;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+}
+
+.items-section{
+    margin-bottom: 0.75em;
+    margin-top: 0.25em;
+    overflow-y: auto;    
+    border-bottom: 1px solid gray;
+}
+
+.cart-items{
+    display: flex;
+    flex-direction: column;
+}
+
+.list-cart-item {
+    display: flex;
+    width: 98%;
+    flex-basis: auto ;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 2px;
+    position: relative;
+    background-color: rgb(184, 221, 245);
+}
+
+.list-cart-item > img{
+    height: 5em;
+    width: 5em;
+    object-fit: contain;
+}
+
+.list-cart-item > p:nth-child(2){
+    flex-basis: auto;
+    width: 100%;
+}
+
+.list-cart-item > p:nth-child(4){
+    flex-basis: 11em;
+    padding-right: 4px;
+}
+
+.list-cart-item > p{
+    margin: auto;
+    padding-left: 1em;
+}
+
+.header, .cart-total, .main-project{
+    box-sizing: border-box;
+}
+
+.cart-total{
+    display: flex;
+
+}
+
+.cart-total > p:first-child{
+    margin-right: 5px;
+}
+
+.main-project{
+    display: grid;
+    position: relative;
+    height: 99vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3em 1fr 3em 5em;    
+    width: 35%;
+    margin: 2px auto 2px auto;
+    border: 1px solid lightgray;
+    padding: 0.5em;
+    background-color: rgb(223, 243, 255);
+    font-family: Arial, sans-serif;
+}
+
+.quantity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 6em;
+}
+
+.quantity > button{
+    width: 1.5em;
+    height: 1.5em;
+    background-color: transparent;
+    border: none;
+    
+}
+
+.quantity > p:nth-child(2){
+    flex-basis: auto;
+    width: 100%;
+    padding-left: 8px;
+    padding-bottom: 2px;
+}
+
+.search-item-button, .scan-item-button{
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.search-item-button{
+    float: right;
+}
+
+.header{
+    border-bottom: 1px solid gray;
+}
+
+.header h3{
+    padding-top: 0.75em;
+}
+
+.image-quantity .quantity p{
+    padding-left: 20px;
+}
+
+.empty-basket{
+    height: fit-content;
+    color: rgb(134, 134, 134);
+    top: 37%;
+    position: fixed;
+}
+
+.empty-basket-hide{
+    display:none;
+}
+
+/* For all Mobile devices */
+@media screen and (min-device-width: 200px) and (max-device-width: 640px) {
+    .main-project{
+        width: 100%;
+    }
+}

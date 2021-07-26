@@ -1,0 +1,57 @@
+<!doctype HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <link href="./dialog.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="mainProject" class="main-project">
+        <div id="header" class="header">
+            <h3>Your Basket</h3>
+        </div>
+        <div id="itemsSection" class="items-section">
+            <ul id="cartItems" class="cart-items">
+
+            </ul>
+            <div id="emptyBasket" class="empty-basket">
+                Basket is empty
+            </div>
+        </div>
+        <div id="cartTotal" class="cart-total">
+            <p>Total Amount: </p>
+            <p id="totalAmount" class="total-amount">0</p>
+        </div>
+        <div id="addItemButtons" class="add-item-buttons">
+            <button id="scanItemButton" class="scan-item-button">
+                Scan
+                <img>
+            </button>
+            <button id="searchItemButton" class="search-item-button">
+                Search
+                <img>
+            </button>
+        </div>
+    </div>
+    <!-- Reusable Dialog for Scan and Search -->
+    <div id="dialog" class="dialog">
+        <header id="dialogHeader" class="dialog-header">
+            <div id="dialogTitle" class="dialog-title"></div>
+            <button id="closeDialogButton" class="close-dialog-button">
+                <img class="close-dialog-button-icon" src="./images/close.png" alt="Close Dialog">
+            </button>
+        </header>
+        <main id="dialogContent" class="dialog-content">
+
+        </main>
+    </div>
+    <div id="shade"></div>
+    <script type="module" async="true" src="index.js"></script>
+    <!-- HTML5 Scanner -->
+    <script async="true" src="https://unpkg.com/html5-qrcode@2.0.9/dist/html5-qrcode.min.js"></script>
+</body>
+
+</html>
